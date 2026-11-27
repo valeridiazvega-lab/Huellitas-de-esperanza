@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huellitas de Esperanza | Un descanso con amor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header>
+    <div class="logo">🐾 Huellitas <span>de Esperanza</span></div>
+
+    <button class="menu-btn" id="menuBtn"
+    aria-label="Abrir menú" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav id="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#propuesta">Nuestra propuesta</a>
+        <a href="#nosotras">Nosotras</a>
+        <a href="#contacto">Participa</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+<main>
+<section class="hero" id="inicio">
+    <div class="hero-content">
+
+        <div class="tag">❤️ EMPRENDIMIENTO SOLIDARIO</div>
+
+        <h1>
+            Un descanso cómodo,
+            <span>una esperanza más.</span>
+        </h1>
+
+        <p>
+            Creamos y donamos camas cómodas para perros y gatos
+            en situación de calle y aquellos que viven en refugios.
+            Porque cada huellita merece un lugar seguro donde descansar
+            y sentirse amada.
+        </p>
+
+        <a href="#contacto" class="btn">
+            ¡Quiero ayudar! 🐾
+        </a>
+
+    </div>
+</section>
+
+<!-- PROPUESTA DE VALOR -->
+<section id="propuesta">
+
+    <div class="section-title">
+        <h2>Beneficios</h2>
+        <p>
+            Transformamos pequeños gestos de solidaridad en grandes
+            muestras de amor para nuestros amigos de cuatro patas.
+        </p>
+    </div>
+
+    <div class="features">
+
+        <div class="feature-card">
+            <div class="emoji">🛏️</div>
+            <h3>Comodidad y bienestar</h3>
+            <p>
+                Elaboramos camas acogedoras que ofrecen a perros
+                y gatos un espacio cómodo, protegido y adecuado
+                para su descanso.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="emoji">❤️</div>
+            <h3>Donaciones solidarias</h3>
+            <p>
+                Nuestras camas son donadas gratuitamente a animales
+                en situación de calle y a casas de refugio que
+                necesitan apoyo.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="emoji">🐶</div>
+            <h3>Amor y compromiso</h3>
+            <p>
+                Promovemos la empatía y la responsabilidad social,
+                motivando a más personas a contribuir al bienestar
+                de los animales necesitados.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- NOSOTRAS -->
+<section class="about" id="nosotras">
+
+    <h2>Detrás de cada huellita hay una esperanza</h2>
+
+    <p>
+        Somos Dalma y Valeri, creadoras de Huellitas de Esperanza.
+        Nuestro emprendimiento nace del amor por los animales y
+        del deseo de ayudar a aquellos perritos y gatitos que no
+        cuentan con un hogar. Queremos brindarles camas donadas
+        que les permitan descansar con comodidad y dignidad.
+        Creemos que no se necesita mucho para cambiar una vida:
+        basta con un corazón dispuesto a ayudar.
+    </p>
+
+</section>
+
+<!-- CONTACTO Y ACCION -->
+<section class="cta" id="contacto">
+
+    <h2>¡Sé parte de esta esperanza! 🐾</h2>
+
+    <p>
+        Tú también puedes formar parte de este cambio.
+        Ayúdanos a llegar a más refugios y animales que necesitan
+        un lugar cálido donde descansar. ¡Cada aporte cuenta!
+    </p>
+
+    <a href="mailto:huellitasdeesperanza@gmail.com"
+       class="btn">
+       Quiero colaborar ❤️
+    </a>
+
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <h3>🐾 Huellitas de Esperanza</h3>
+    <p>Un pequeño gesto puede cambiar una vida.</p>
+    <p>Integrantes: <span>Dalma y Valeri</span></p>
+    <p>© 2026 Huellitas de Esperanza | Hecho con amor ❤️</p>
+</footer>
+
+<!-- JAVASCRIPT: MENU HAMBURGUESA -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navbar = document.getElementById("navbar");
+
+menuBtn.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+
+    const abierto = navbar.classList.contains("active");
+
+    menuBtn.textContent = abierto ? "✕" : "☰";
+    menuBtn.setAttribute("aria-expanded", abierto);
+    menuBtn.setAttribute(
+        "aria-label",
+        abierto ? "Cerrar menú" : "Abrir menú"
+    );
+});
+
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Abrir menú");
+    });
+});
+</script>
+
+</body>
+</html>
